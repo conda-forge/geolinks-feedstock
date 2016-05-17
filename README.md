@@ -5,7 +5,7 @@ Home: https://github.com/geopython/geolinks
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Utilities to deal with geospatial links
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/geolinks-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/geolinks-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/geolinks-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/geolinks-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/geolinks-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/geolinks-feedstock/branch/master)
