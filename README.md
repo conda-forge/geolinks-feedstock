@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Utilities to deal with geospatial links
+Summary: Utilities to deal with geospatial links.
 
 
 
