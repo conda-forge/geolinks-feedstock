@@ -1,35 +1,43 @@
+{% set name = "geolinks" %}
 {% set version = "0.2.1" %}
 
 package:
-  name: geolinks
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: geolinks-{{ version }}.tar.gz
-  url: https://github.com/geopython/geolinks/archive/{{ version }}.tar.gz
-  sha256: fb7a6b517a3cf4701ca5bc81a9d39c9c2644b3e532e6d0e4059ad82e4f756c70
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geolinks-{{ version }}.tar.gz
+  sha256: f1b5c426a60baca472b514754f7a4d23a93ffad007fbbdc10144642837430f50
 
 build:
+  entry_points:
+    - geolinks=geolinks:cli
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
+    - python >=3.6
+    - setuptools
     - pip
-    - python
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - geolinks
+  commands:
+    - pip check
+    - geolinks --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/geopython/geolinks
+  summary: Utilities to deal with geospatial links
   license: MIT
-  license_file: LICENSE
-  summary: Utilities to deal with geospatial links.
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
