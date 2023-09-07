@@ -8,9 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geolinks-{{ version }}.tar.gz
   sha256: b8bd8b0931594b666921e26954dae596c172a34af27d81d830f720a49cd5521a
-  patches:
-    # https://github.com/geopython/geolinks/issues/10
-    - hardcode_version.patch
 
 build:
   entry_points:
