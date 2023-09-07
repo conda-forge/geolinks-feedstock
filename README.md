@@ -7,7 +7,7 @@ Home: https://github.com/geopython/geolinks
 
 Package license: MIT
 
-Summary: Utilities to deal with geospatial links.
+Summary: Utilities to deal with geospatial links
 
 Current build status
 ====================
